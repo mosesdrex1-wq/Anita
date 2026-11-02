@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Anita ⚽</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  background:
+    radial-gradient(ellipse at top, #164b39 0%, transparent 55%),
+    linear-gradient(160deg, #050b0a, #101b18, #020403);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.stadium {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(150, 255, 215, 0.13),
+    transparent
+  );
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 30px 22px;
+  border: 1px solid rgba(100, 255, 180, 0.35);
+  border-radius: 24px;
+  background: rgba(5, 18, 13, 0.88);
+  box-shadow: 0 0 35px rgba(0, 255, 130, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid #43e79b;
+  border-radius: 30px;
+  color: #78ffba;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.ball {
+  font-size: 76px;
+  margin: 20px 0;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px #37e78c);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-12px) rotate(15deg); }
+}
+
+h1 {
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+h1 span {
+  color: #63f7a9;
+}
+
+p {
+  color: #c2d4cb;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.pitch {
+  height: 90px;
+  border: 1px solid rgba(93, 255, 165, 0.35);
+  border-radius: 12px;
+  margin: 22px 0;
+  position: relative;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(36, 155, 85, 0.15) 0 35px,
+      rgba(36, 155, 85, 0.04) 35px 70px
+    );
+}
+
+.pitch::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #62eaa0;
+}
+
+.pitch::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #62eaa0;
+  border-radius: 50%;
+  left: calc(50% - 24px);
+  top: 20px;
+}
+
+button {
+ 
